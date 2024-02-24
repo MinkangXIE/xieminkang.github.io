@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3 {
+  margin: 10px;
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p {
+  margin: 10px;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  margin-right: 20px;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+#features {
+  top: 0;
+  height: 200px;
+  margin-top: 20px;
+  width: 300px;
+}
+
+#legend {
+  padding: 5px 10px 5px 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 30px;
+  height: 200px;
+  bottom: 80px;
+  width: 170px;
+}
+.legend-key {
+  display: inline;
+  border-radius: 20%;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+.map-overlay {
+  position: relative;
+  margin-top: 40px;
+}
+.layer-select {
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  z-index: 1;
+}
+.layer-select select {
+  width: 130px;
+  height: 40px;
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+.layer-select select::-ms-expand {
+  display: none;
+}
+.layer-select select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("dropdown-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+#map-title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+#coordinates {
+  position: absolute;
+  z-index: 999;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 3px;
+}

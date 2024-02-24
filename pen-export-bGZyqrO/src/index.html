@@ -1,0 +1,56 @@
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    #map {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .map-overlay#legend {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="layer-select">
+    <select id="layer-select">
+      <option value="small town">small town1</option>
+      <option value="town">town2</option>
+      <option value="small city">small city3</option>
+      <option value="city">city4</option>
+      <option value="large city">large city5</option>
+    </select>
+  </div>
+  <div class="map-overlay" id="legend">
+  </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      var legendDiv = document.getElementById('legend');
+      var newDiv = document.createElement('div');
+      newDiv.innerHTML = '&#8593; Less urbanization';
+      legendDiv.appendChild(newDiv);
+    });
+  </script>
+</body>
+
+</html>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+<div id="coordinates" class="map-overlay" style="position: absolute; bottom: 10px; left: 10px; background: rgba(255, 255, 255, 0.8); padding: 5px 10px; border-radius: 3px;">Longitude: --, Latitude: --</div>
+<div id="map-title">Urbanization in Scotland</div>
+<div id="map"></div>
